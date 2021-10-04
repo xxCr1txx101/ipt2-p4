@@ -28,7 +28,7 @@ class LogRecordListener
     {
         DB::table('logs')->insert([
             'user_id'   => auth()->user()->id,
-            'log_entry'  => $event->log,
+            'log_entry'  => $event->log_entry,
             'created_at' => now()
         ]);
     }
